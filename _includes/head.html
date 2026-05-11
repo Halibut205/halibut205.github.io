@@ -114,6 +114,45 @@
       color: inherit !important;
     }
 
+    /* Background Image */
+    html {
+      background-image: url('/assets/img/bg/bg.jpg') !important;
+      background-attachment: fixed !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+
+    body {
+      background: transparent !important;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(9, 16, 10, 0.65);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Remove all background colors */
+    body, main, .main-wrapper, .container, .container-xl,
+    .topbar, .navbar, header, nav, footer, .footer {
+      background-color: transparent !important;
+      background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    main {
+      background-color: transparent !important;
+    }
+
     /* Navigation Active State */
     .nav-item.active > .nav-link {
       background-color: var(--color-primary) !important;
