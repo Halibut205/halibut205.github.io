@@ -4,19 +4,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-```bash
-[Halibut@CS ~]$ whoami
-├── Name: Halibut
-├── Role: Leader of ECSC
-├── Expertise: Network - Digital Forensics
-└── Status: Expanding technical horizon
-```
-
 ## About Me
 
-I'm **Halibut**, a cybersecurity enthusiast (fancy term for "professional paranoid") with a strong foundation in **Network Security** and **Digital Forensics**. I'm currently expanding my expertise into **Binary Analysis** and **Cloud Security** — basically teaching myself to think in 1s and 0s while keeping other people's data safer than my own passwords.
+I'm **Halibut**, a professional paranoid (cybersecurity they said) in ECSC, with a strong foundation in **Network** and **Digital Forensics**, I'm currently expanding my expertise into **Digital Forensics**, **Binary Analysis** and **Cloud Security**.
 
-When I'm not debugging malware or hunting for vulnerabilities, you'll find me dominating souls in *Elden Ring* or getting lost in the philosophical rabbit holes of Sci-fi cinema.
+When I'm not paranoid, you'll find me dominating souls game or just watching some Fritz Lang's movies.
 
 My interests:
 - **Digital Forensics** - Investigating digital evidence, incident analysis & incident responses
