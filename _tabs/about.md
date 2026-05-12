@@ -4,8 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## `whoami`
-
 ```bash
 [Halibut@CS ~]$ whoami
 ├── Name: Halibut
@@ -16,12 +14,12 @@ order: 4
 
 ## About Me
 
-I'm **Halibut**, With a strong foundation in **Network** and **Digital Forensics**, I'm now expanding my expertise into the world of **Binary Analysis**, and **Cloud Security**.
+I'm **Halibut**, with a strong foundation in **Network** and **Digital Forensics**, I'm now expanding my expertise into the world of **Binary Analysis**, and **Cloud Security**.
 
 My expertise & interests:
-- **Digital Forensics** - Investigating digital evidence & incident analysis 🔍
+- **Digital Forensics** - Investigating digital evidence & incident analysis
 - **Binary Analysis** - My journey through the cybersecurity field
-- **Cloud Security** - Securing cloud infrastructure & understanding cloud threats ☁️
+- **Cloud Security** - Securing cloud infrastructure & understanding cloud threats
 - **Threat Analysis** - Understanding malware behavior & attack patterns
 
 ## What You'll Find Here

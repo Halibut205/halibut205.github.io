@@ -218,6 +218,47 @@
       box-shadow: 0 10px 24px rgba(121, 174, 111, 0.3) !important;
     }
 
+    /* Mobile & Tablet Responsive */
+    @media (max-width: 1024px) {
+      html {
+        background-size: cover !important;
+        background-position: center !important;
+      }
+
+      body::before {
+        background-color: rgba(52, 103, 57, 0.88) !important;
+      }
+
+      main {
+        padding: 1rem !important;
+      }
+
+      .post-preview, .card {
+        margin: 0.5rem 0 !important;
+      }
+
+      .tag {
+        font-size: 0.85rem !important;
+        padding: 0.25rem 0.5rem !important;
+      }
+
+      .btn, .btn-primary, button, [class*="btn"] {
+        background-color: transparent !important;
+        background-image: none !important;
+        border: 1px solid var(--color-pale) !important;
+        color: var(--color-pale) !important;
+      }
+
+      .btn:hover, .btn-primary:hover, button:hover, [class*="btn"]:hover {
+        background-color: transparent !important;
+        background-image: none !important;
+        border-color: var(--color-accent) !important;
+        color: var(--color-accent) !important;
+        transform: scale(1.05) !important;
+        box-shadow: none !important;
+      }
+    }
+
     /* Sidebar Icons Hover */
     .sidebar-bottom a {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
