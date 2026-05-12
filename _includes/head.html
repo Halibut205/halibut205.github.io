@@ -226,7 +226,7 @@
       }
 
       body::before {
-        background-color: rgba(52, 103, 57, 0.88) !important;
+        background-color: rgba(9, 16, 10, 0.65) !important;
       }
 
       main {
@@ -242,20 +242,32 @@
         padding: 0.25rem 0.5rem !important;
       }
 
-      .btn, .btn-primary, button, [class*="btn"] {
+      .btn, .btn-primary, button, [class*="btn"],
+      input, textarea, .form-control, .search-input, .search-box,
+      .sidebar-toggle, .topbar-toggle, .nav-toggle {
         background-color: transparent !important;
         background-image: none !important;
-        border: 1px solid var(--color-pale) !important;
+        border: none !important;
+        box-shadow: none !important;
         color: var(--color-pale) !important;
       }
 
-      .btn:hover, .btn-primary:hover, button:hover, [class*="btn"]:hover {
+      .btn:hover, .btn-primary:hover, button:hover, [class*="btn"]:hover,
+      input:hover, textarea:hover, .form-control:hover, .search-input:hover, .search-box:hover,
+      .sidebar-toggle:hover, .topbar-toggle:hover, .nav-toggle:hover {
         background-color: transparent !important;
         background-image: none !important;
-        border-color: var(--color-accent) !important;
+        border: none !important;
+        box-shadow: none !important;
         color: var(--color-accent) !important;
         transform: scale(1.05) !important;
+      }
+
+      input:focus, textarea:focus, .form-control:focus,
+      .sidebar-toggle:focus, .topbar-toggle:focus {
+        border: none !important;
         box-shadow: none !important;
+        background-color: transparent !important;
       }
     }
 
