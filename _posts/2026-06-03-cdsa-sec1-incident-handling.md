@@ -1,16 +1,9 @@
 ---
-title: "CDSA - Section 1: Incident Handling Process"
+title: "SOC HTB - Section 1: Incident Handling Process"
 date: 2026-06-03 00:00:00 +0700
-categories: [Certifications, CDSA]
+categories: [HTB SOC Jobpath]
 tags: [cdsa, study-notes, htb-soc-jobpath]
 ---
-
-> **CDSA Certification Path Series:**
-> - [x] **Section 1**: [Incident Handling Process](/posts/cdsa-sec1-incident-handling/) *(Bạn đang ở đây)*
-> - [ ] **Section 2**: (Sắp ra mắt)
-> - [ ] **Section 5**: [Understanding Log Sources & Investigating with Splunk](/posts/cdsa-sec5-understanding-log-sources-splunk/)
-{: .prompt-info }
-
 
 # Introduction
 
