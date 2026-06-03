@@ -2,7 +2,7 @@
 title: "CDSA - Section 1: Incident Handling Process"
 date: 2026-06-03 00:00:00 +0700
 categories: [Certifications, CDSA]
-tags: [incident-handling, soc, security]
+tags: [cdsa, study-notes, htb-soc-jobpath]
 ---
 
 > **CDSA Certification Path Series:**
