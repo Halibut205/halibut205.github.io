@@ -4,11 +4,7 @@ date: 2026-06-03 00:00:00 +0700
 categories: [HTB SOC Jobpath]
 tags: [cdsa, study-notes, htb-soc-jobpath]
 ---
-> **SOC HTB Certification Path Series:**
-> - [x] **Section 1**: [Incident Handling Process](/posts/cdsa-sec1-incident-handling/) *(Bạn đang ở đây)*
-> - [x] **Section 2**: [Security Monitoring & SIEM Fundamentals](/posts/soc-htb-sec2-security-monitoring-siem/)
-> - [ ] **Section 5**: Understanding Log Sources & Investigating with Splunk
-{: .prompt-info }
+
 
 
 # Introduction
