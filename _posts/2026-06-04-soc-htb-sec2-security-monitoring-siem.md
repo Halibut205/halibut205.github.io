@@ -5,12 +5,6 @@ categories: [HTB SOC Jobpath]
 tags: [cdsa, study-notes, htb-soc-jobpath, siem]
 ---
 
-> **SOC HTB Certification Path Series:**
-> - [x] **Section 1**: [Incident Handling Process](/posts/soc-htb-section-1-incident-handling-process/)
-> - [x] **Section 2**: [Security Monitoring & SIEM Fundamentals](/posts/soc-htb-section-2-security-monitoring-siem-fundamentals/) *(Bạn đang ở đây)*
-> - [ ] **Section 5**: Understanding Log Sources & Investigating with Splunk
-{: .prompt-info }
-
 # **SIEM & SOC Fundamentals**
 
 ## SIEM Definition & Fundamentals
