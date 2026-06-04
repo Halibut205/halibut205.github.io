@@ -155,6 +155,11 @@
       background-color: transparent !important;
     }
 
+    /* Fix PWA notification z-index so it is clickable */
+    #notification {
+      z-index: 9999 !important;
+    }
+
     /* Navigation Active State */
     .nav-item.active > .nav-link {
       background-color: var(--color-primary) !important;
