@@ -5,8 +5,6 @@ categories: [HTB SOC Jobpath]
 tags: [cdsa, study-notes, htb-soc-jobpath, siem]
 ---
 
-
-
 # **SIEM & SOC Fundamentals**
 
 ## SIEM Definition & Fundamentals
@@ -427,3 +425,202 @@ At this point, the analyst:
 - Documents the **lessons learned** to improve future responses
 
 **Every incident, regardless of its severity, is an opportunity to strengthen the organization's ability to handle future threats.**
+
+# **Elastic Stack SIEM Home Mini Lab**
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- VirtualBox or VMware
+- Basic knowledge of Linux and virtualization software
+
+## **Task 1: Set up an Elastic Account**
+
+- Sign up at [Elastic Cloud](https://cloud.elastic.co/registration). You will automatically have 14 days free trial
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%209.png)
+
+#### **Main Workspace (Center):**
+
+- **Hosted deployments:** This section manages your traditional, dedicated cloud environments. I’m currently have one active deployment named "My deployment." It is running on Google Cloud Platform (GCP) in the Iowa region, using Elastic version 9.4.2, and its status is currently "Healthy." I can also click "Open" to access its Kibana interface or "Manage" to configure its hardware, scaling, and settings.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2010.png)
+
+- **Serverless projects:** This is an alternative to hosted deployments where Elastic handles all the underlying infrastructure and scaling automatically. You pay only for what you use, and there are no nodes or clusters to manage manually. I’m have not created any serverless projects yet.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2011.png)
+
+- **Connected clusters:** This section allows you to link your own self-managed (on-premises or private cloud) Elasticsearch clusters to your Elastic Cloud account. This allows you to manage them centrally and take advantage of specific cloud-only features.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2012.png)
+
+#### Right Sidebar
+
+This side panel provides operational awareness and updates from Elastic:
+
+- **Cloud status:** Displays the health of the underlying cloud providers (AWS, GCP, Azure) that Elastic Cloud relies on. It is currently showing a "Partial system outage" regarding an AWS region in Bahrain, which helps you diagnose if regional issues might affect your deployments.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2013.png)
+
+- **News:** A feed of recent product releases (like versions 8.19.16 and 9.3.5), security updates, and wrap-ups from tech conferences.
+- **Community:** Links to events, webinars, and community forums, such as the "ElasticON" event shown here.
+
+#### Left Navigation Menu
+
+This sidebar provides access to overarching account and security controls, such as managing users (**Security**), organizing your cloud environment (**Organization**), and handling invoices and subscriptions (**Billing**).
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2014.png)
+
+### Manage deployment
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2015.png)
+
+### Hosted (System Setup)
+
+- **Overview:** The main dashboard showing your basic information and connection links.
+- **Edit:** The page where you add more storage space, increase memory, or update the software version.
+- **Kibana:** Settings for your visual search interface.
+- **Integrations Server:** Settings for the tools that collect data from your outside applications.
+
+### Monitoring (System Status)
+
+- **Health:** A quick indicator of whether your system is working normally or experiencing errors.
+- **Logs and metrics:** Detailed background text recording system events, warnings, and errors.
+- **Performance:** Line graphs showing exactly how much computer processing power and memory your system is currently using.
+- **Activity:** A history log of administrative changes you or your team have made to the setup.
+
+### Elasticsearch (Data Management)
+
+- **Shards and instances:** A visual layout of how your data files are divided and distributed across the servers.
+- **Snapshots:** The tool used to create backups of your data or restore information from an older backup.
+- **API console:** A text window where you can type direct code commands to interact with the database.
+
+### Access and security (Protection)
+
+- **Security:** The place to reset passwords, manage secret keys, and restrict which outside IP addresses are allowed to connect to your system.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2016.png)
+
+### Core System Controls
+
+- **Open Kibana:** Opens the main web interface where you view your data, run searches, and look at your charts.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2017.png)
+
+- **Actions:** Opens a list of major system commands, such as restarting the system or deleting the deployment completely.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2018.png)
+
+### Setup and Connections
+
+- **Copy Icon for Cloud ID (Overlapping Squares):** Copies a unique text string to your clipboard. You paste this string into other software so it knows exactly how to connect to your database.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2019.png)
+
+- **Application Endpoints (Elasticsearch, Kibana, etc.):** Clicking these text links provides the exact web addresses and ports required for outside applications to send data into your system.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2020.png)
+
+### Configuration
+
+- **Edit Icon for Hardware Profile:** Takes you directly to the settings page where you can increase the physical storage space, memory, or processing power of your system.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2021.png)
+
+### General Management
+
+- **Add tags:** Used to attach custom labels to your system (like "project A" or "testing") to help you organize and sort your resources.
+- **Add budget:** Used to set a spending limit. It will alert you if your system costs exceed the amount you allow.
+
+### Instances
+
+- **Data & Master Instances:** You have two main 4GB servers (Zone A and Zone B). They store your actual data and run your search queries. Zone A is currently the active manager (**master**), while Zone B is the backup (**master eligible**) ready to take over if Zone A fails.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2022.png)
+
+- **Tiebreaker Instance (Zone C):** A small 1GB server that does not store data. Its only job is to act as a third voting member. If Zone A and Zone B lose connection to each other, this server casts the tie-breaking vote to decide which one stays in charge, preventing system conflicts.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2023.png)
+
+- **Kibana Instance:** A 2GB server dedicated entirely to running the visual web interface. It processes the dashboards, buttons, and charts you interact with on your screen.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2024.png)
+
+- **Integrations Server:** A 1GB server that acts as a receiver. It catches incoming data streams from your outside applications and agents, then forwards that data into the main database.
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2025.png)
+
+## **Task 2: Setting up the Linux VM (Kali Linux)**
+
+- Download the Kali Linux VM from [Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines).
+- Create a new VM using VirtualBox or VMware.
+- Start the VM and follow the prompts to install Kali Linux.
+- Log in using credentials: `kali` (username) and `kali` (password).
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2026.png)
+
+I’m using VirtualBox.
+
+## **Task 3: Setting up the Agent to Collect Logs**
+
+### Navigate to Kibana
+
+- Look at the top right corner of your current screen and click the blue **Open Kibana** button.
+- The system will open a new tab and load the main Kibana workspace interface.
+
+### Create the Elastic Defend Configuration
+
+- Select **Add integration**
+    
+    ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2027.png)
+    
+- In the search bar, type **Elastic Defend** and select the corresponding result.
+    
+    ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2028.png)
+    
+- Click the **Add Elastic Defend** button in the top right corner and then **Install Elastic Agent**.
+    
+    ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2029.png)
+    
+- Follow setup instruction
+    
+    ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2030.png)
+    
+    I’m going to use version for `linux x86_64`.
+    
+
+### Verify Success
+
+- Go back to the web browser where Kibana is open.
+    - Your Kali machine is now connected and protected by Elastic Defend. You can close this panel.
+- Look at the bottom of the installation panel; the system will automatically update the status from *Waiting for agent* to the green notifications **Agent enrolled.**
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2031.png)
+
+![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2032.png)
+
+Verify installation using: `sudo systemctl status elastic-agent.service`
+
+### Configure the Protection Level
+
+- **Integration name:** Give it a simple name (e.g., `kali-defend`).
+- **Configuration Preset:** Select **Complete EDR** from the menu to get full endpoint detection and response capabilities.
+- **Agent policy:** Select **New hosts** and name your new policy (e.g., `Kali-Policy`).
+- Click **"Save and continue"** at the bottom.
+
+## **Task 4: Generating Security Events on the Kali VM**
+
+- Ensure Nmap is installed (`sudo apt-get install nmap` if not preinstalled).
+- Run Nmap scans (`sudo nmap <ip-address>`) to generate security events.
+- Experiment with various Nmap commands like:
+    - `nmap -sS <ip-address>`
+    - `nmap -sT <ip-address>`
+    - `nmap -p- <ip-address>`
+    - `nmap -sS [scanme.nmap.org](http://scanme.nmap.org/)`
+
+## **Task 5: Querying for Security Events in the Elastic SIEM**
+
+## **Task 6: Create a Dashboard to Visualize Events**
+
+## **Task 7: Create an Alert**
