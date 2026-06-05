@@ -426,22 +426,22 @@ At this point, the analyst:
 
 **Every incident, regardless of its severity, is an opportunity to strengthen the organization's ability to handle future threats.**
 
-# **Elastic Stack SIEM Home Mini Lab**
+## **Elastic Stack SIEM Home Mini Lab**
 
-## Prerequisites
+### Prerequisites
 
 Before starting, ensure you have:
 
 - VirtualBox or VMware
 - Basic knowledge of Linux and virtualization software
 
-## **Task 1: Set up an Elastic Account**
+#### **Task 1: Set up an Elastic Account**
 
 - Sign up at [Elastic Cloud](https://cloud.elastic.co/registration). You will automatically have 14 days free trial
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%209.png)
 
-#### **Main Workspace (Center):**
+##### **Main Workspace (Center):**
 
 - **Hosted deployments:** This section manages your traditional, dedicated cloud environments. I’m currently have one active deployment named "My deployment." It is running on Google Cloud Platform (GCP) in the Iowa region, using Elastic version 9.4.2, and its status is currently "Healthy." I can also click "Open" to access its Kibana interface or "Manage" to configure its hardware, scaling, and settings.
 
@@ -455,7 +455,7 @@ Before starting, ensure you have:
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2012.png)
 
-#### Right Sidebar
+##### Right Sidebar
 
 This side panel provides operational awareness and updates from Elastic:
 
@@ -466,43 +466,43 @@ This side panel provides operational awareness and updates from Elastic:
 - **News:** A feed of recent product releases (like versions 8.19.16 and 9.3.5), security updates, and wrap-ups from tech conferences.
 - **Community:** Links to events, webinars, and community forums, such as the "ElasticON" event shown here.
 
-#### Left Navigation Menu
+##### Left Navigation Menu
 
 This sidebar provides access to overarching account and security controls, such as managing users (**Security**), organizing your cloud environment (**Organization**), and handling invoices and subscriptions (**Billing**).
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2014.png)
 
-### Manage deployment
+#### Manage deployment
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2015.png)
 
-### Hosted (System Setup)
+#### Hosted (System Setup)
 
 - **Overview:** The main dashboard showing your basic information and connection links.
 - **Edit:** The page where you add more storage space, increase memory, or update the software version.
 - **Kibana:** Settings for your visual search interface.
 - **Integrations Server:** Settings for the tools that collect data from your outside applications.
 
-### Monitoring (System Status)
+#### Monitoring (System Status)
 
 - **Health:** A quick indicator of whether your system is working normally or experiencing errors.
 - **Logs and metrics:** Detailed background text recording system events, warnings, and errors.
 - **Performance:** Line graphs showing exactly how much computer processing power and memory your system is currently using.
 - **Activity:** A history log of administrative changes you or your team have made to the setup.
 
-### Elasticsearch (Data Management)
+#### Elasticsearch (Data Management)
 
 - **Shards and instances:** A visual layout of how your data files are divided and distributed across the servers.
 - **Snapshots:** The tool used to create backups of your data or restore information from an older backup.
 - **API console:** A text window where you can type direct code commands to interact with the database.
 
-### Access and security (Protection)
+#### Access and security (Protection)
 
 - **Security:** The place to reset passwords, manage secret keys, and restrict which outside IP addresses are allowed to connect to your system.
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2016.png)
 
-### Core System Controls
+#### Core System Controls
 
 - **Open Kibana:** Opens the main web interface where you view your data, run searches, and look at your charts.
 
@@ -512,7 +512,7 @@ This sidebar provides access to overarching account and security controls, such 
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2018.png)
 
-### Setup and Connections
+#### Setup and Connections
 
 - **Copy Icon for Cloud ID (Overlapping Squares):** Copies a unique text string to your clipboard. You paste this string into other software so it knows exactly how to connect to your database.
 
@@ -522,18 +522,18 @@ This sidebar provides access to overarching account and security controls, such 
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2020.png)
 
-### Configuration
+#### Configuration
 
 - **Edit Icon for Hardware Profile:** Takes you directly to the settings page where you can increase the physical storage space, memory, or processing power of your system.
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2021.png)
 
-### General Management
+#### General Management
 
 - **Add tags:** Used to attach custom labels to your system (like "project A" or "testing") to help you organize and sort your resources.
 - **Add budget:** Used to set a spending limit. It will alert you if your system costs exceed the amount you allow.
 
-### Instances
+#### Instances
 
 - **Data & Master Instances:** You have two main 4GB servers (Zone A and Zone B). They store your actual data and run your search queries. Zone A is currently the active manager (**master**), while Zone B is the backup (**master eligible**) ready to take over if Zone A fails.
 
@@ -551,7 +551,7 @@ This sidebar provides access to overarching account and security controls, such 
 
 ![image.png](/assets/img/cdsa/sec2-security-monitoring-siem/image%2025.png)
 
-## **Task 2: Setting up the Linux VM (Kali Linux)**
+### **Task 2: Setting up the Linux VM (Kali Linux)**
 
 - Download the Kali Linux VM from [Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines).
 - Create a new VM using VirtualBox or VMware.
@@ -562,14 +562,14 @@ This sidebar provides access to overarching account and security controls, such 
 
 I’m using VirtualBox.
 
-## **Task 3: Setting up the Agent to Collect Logs**
+### **Task 3: Setting up the Agent to Collect Logs**
 
-### Navigate to Kibana
+#### Navigate to Kibana
 
 - Look at the top right corner of your current screen and click the blue **Open Kibana** button.
 - The system will open a new tab and load the main Kibana workspace interface.
 
-### Create the Elastic Defend Configuration
+#### Create the Elastic Defend Configuration
 
 - Select **Add integration**
     
@@ -590,7 +590,7 @@ I’m using VirtualBox.
     I’m going to use version for `linux x86_64`.
     
 
-### Verify Success
+#### Verify Success
 
 - Go back to the web browser where Kibana is open.
     - Your Kali machine is now connected and protected by Elastic Defend. You can close this panel.
@@ -602,14 +602,14 @@ I’m using VirtualBox.
 
 Verify installation using: `sudo systemctl status elastic-agent.service`
 
-### Configure the Protection Level
+#### Configure the Protection Level
 
 - **Integration name:** Give it a simple name (e.g., `kali-defend`).
 - **Configuration Preset:** Select **Complete EDR** from the menu to get full endpoint detection and response capabilities.
 - **Agent policy:** Select **New hosts** and name your new policy (e.g., `Kali-Policy`).
 - Click **"Save and continue"** at the bottom.
 
-## **Task 4: Generating Security Events on the Kali VM**
+### **Task 4: Generating Security Events on the Kali VM**
 
 - Ensure Nmap is installed (`sudo apt-get install nmap` if not preinstalled).
 - Run Nmap scans (`sudo nmap <ip-address>`) to generate security events.
@@ -619,8 +619,8 @@ Verify installation using: `sudo systemctl status elastic-agent.service`
     - `nmap -p- <ip-address>`
     - `nmap -sS [scanme.nmap.org](http://scanme.nmap.org/)`
 
-## **Task 5: Querying for Security Events in the Elastic SIEM**
+### **Task 5: Querying for Security Events in the Elastic SIEM**
 
-## **Task 6: Create a Dashboard to Visualize Events**
+### **Task 6: Create a Dashboard to Visualize Events**
 
-## **Task 7: Create an Alert**
+### **Task 7: Create an Alert**
