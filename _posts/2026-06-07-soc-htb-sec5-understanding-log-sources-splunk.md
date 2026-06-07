@@ -186,7 +186,7 @@ Also check out this [video](https://youtu.be/vRRXnt89y7E?si=dJdb9ZPpMXSzKkjE).
 
 # **Investigating With Splunk**
 
-## Introduction
+## Introduction To Labs
 
 To proceed, we need access to data we can analyze and use for threat hunting. There are a few sources we can turn to. One source that Splunk provides, along with installation instructions, is [BOTS](https://github.com/splunk/botsv3). Alternatively, [nginx_json_logs](https://raw.githubusercontent.com/elastic/examples/refs/heads/master/Common%20Data%20Formats/nginx_json_logs/nginx_json_logs) is a handy resource providing us with dummy logs in JSON format.
 
