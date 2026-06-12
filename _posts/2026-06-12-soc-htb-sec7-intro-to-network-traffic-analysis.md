@@ -358,7 +358,7 @@ sudo tcpdump
 | --- | --- |
 | D | Will display any interfaces available to capture from. |
 | i | Selects an interface to capture from. ex. `-i eth0` |
-| n, nn | Do not convert addresses (example host addresses and port numbers like `8.8.8.8` to [`google.com`](http://google.com)) to names. |
+| n, nn | Do not convert addresses (example host addresses and port numbers like `8.8.8.8` to [`google.com`](https://google.com)) to names. |
 | e | Will grab the ethernet header along with upper-layer data. |
 | X | Show Contents of packets in hex and ASCII. |
 | XX | Same as `X`, but will also specify ethernet headers. (like using Xe) |
