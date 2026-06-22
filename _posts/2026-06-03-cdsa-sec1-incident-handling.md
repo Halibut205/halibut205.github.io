@@ -3,6 +3,7 @@ title: "SOC HTB - Section 1: Incident Handling Process"
 date: 2026-06-03 00:00:00 +0700
 categories: [HTB SOC Jobpath]
 tags: [cdsa, study-notes, htb-soc-jobpath]
+pin: true
 ---
 
 
