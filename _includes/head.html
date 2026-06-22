@@ -84,6 +84,14 @@
       --color-dark: #346739;
     }
 
+    /* Custom Cursor */
+    html, body {
+      cursor: url('{{ "/assets/img/nat705.cur" | relative_url }}'), auto !important;
+    }
+    a, button, .btn, .nav-link, .card, .tag {
+      cursor: url('{{ "/assets/img/nat705.cur" | relative_url }}'), pointer !important;
+    }
+
     /* Text Emphasis */
     strong, b { color: var(--color-accent) !important; }
     em { color: var(--color-accent) !important; }
