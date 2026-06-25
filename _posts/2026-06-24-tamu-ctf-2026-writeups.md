@@ -5,15 +5,11 @@ categories: [CTF Writeups]
 tags: [ctf, tamu-ctf-2026, web, writeup]
 ---
 
-🥸 Author: Halibut
-
 # I. Web Exploitation
 
 ![image.png](/assets/img/ctf/tamu-ctf-2026/image.png)
 
 Khởi động với một bài web, đầu tiên phải mở thử web lên xem có gì hot. 
-
-Là tài liệu cho CLB, mình sẽ omverexplained nhiều chút với mục đích vừa đọc vừa học thêm kiến thức mới.
 
 ![image.png](/assets/img/ctf/tamu-ctf-2026/image%201.png)
 
