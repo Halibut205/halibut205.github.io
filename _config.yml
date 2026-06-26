@@ -16,7 +16,7 @@ timezone:
 
 title: Halibut # the main title
 
-tagline: SOC Analyst| Blue Team | HaNoi, VN # it will display as the subtitle
+tagline: SOC Analyst | Blue Team | HaNoi, VN # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   An archive from Halibut.
