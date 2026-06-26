@@ -47,6 +47,33 @@ layout: default
 {% endif %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+  {% if paginator.page == 1 %}
+    <article class="card-wrapper card">
+      <a href="{{ '/categories/cyber-defenders/' | relative_url }}" class="post-preview row g-0 flex-md-row-reverse" style="border: 2px solid var(--color-primary);">
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">
+              <i class="fas fa-shield-halved me-2" style="color: var(--color-primary);"></i> Thư mục Cyber Defenders
+            </h1>
+            <div class="card-text content mt-0 mb-3">
+              <p>Chuyên mục tổng hợp toàn bộ các bài viết giải lab thực hành về Network Forensics và phòng thủ Blue Team trên nền tảng CyberDefenders. Nhấn vào đây để xem toàn bộ danh sách bài viết.</p>
+            </div>
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">Cyber Defenders</span>
+              </div>
+              <div class="pin ms-1">
+                <i class="fas fa-thumbtack fa-fw"></i>
+                <span>Ghim Thư Mục</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+  {% endif %}
+
   {% for post in posts %}
     <article class="card-wrapper card">
       <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
