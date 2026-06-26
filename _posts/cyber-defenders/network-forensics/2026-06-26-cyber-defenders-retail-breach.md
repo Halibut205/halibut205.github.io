@@ -10,7 +10,7 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 ![image.png](/assets/img/cyber-defenders/retail-breach/image.png)
 
-<aside>
+<aside markdown="1">
 ➡️ Description
 
 In recent days, ShopSphere, a prominent online retail platform, has experienced unusual administrative login activity during late-night hours. These logins coincide with an influx of customer complaints about unexplained account anomalies, raising concerns about a potential security breach. Initial observations suggest unauthorized access to administrative accounts, potentially indicating deeper system compromise.

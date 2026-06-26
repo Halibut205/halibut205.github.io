@@ -10,7 +10,7 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 ![image.png](/assets/img/cyber-defenders/xxe-infiltration/image.png)
 
-<aside>
+<aside markdown="1">
 ➡️ Description
 
 An automated alert has detected unusual XML data being processed by the server, which suggests a potential XXE (XML External Entity) Injection attack. This raises concerns about the integrity of the company's customer data and internal systems, prompting an immediate investigation.

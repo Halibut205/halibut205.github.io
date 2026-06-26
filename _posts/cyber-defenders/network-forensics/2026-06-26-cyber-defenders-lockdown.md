@@ -12,7 +12,7 @@ My first lab on CyberDefenders.
 
 ![image.png](/assets/img/cyber-defenders/lockdown/image.png)
 
-<aside>
+<aside markdown="1">
 ➡️ Description
 
 TechNova Systems’ SOC has detected suspicious outbound traffic from a public-facing IIS server in its cloud platform—activity suggestive of a web-shell drop and covert connections to an unknown host.
