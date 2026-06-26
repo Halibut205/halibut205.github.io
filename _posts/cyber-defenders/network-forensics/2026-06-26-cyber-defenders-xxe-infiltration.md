@@ -5,17 +5,13 @@ categories: [Cyber Defenders, Network Forensics]
 tags: [cyber-defenders, network-forensics, writeup]
 ---
 
-# XXE Infiltration
-
 **Category**: Network Forensics
 **Checkout the lab here**: https://cyberdefenders.org/blueteam-ctf-challenges/xxe-infiltration/
 
 ![image.png](/assets/img/cyber-defenders/xxe-infiltration/image.png)
 
 <aside>
-➡️
-
-Description
+➡️ Description
 
 An automated alert has detected unusual XML data being processed by the server, which suggests a potential XXE (XML External Entity) Injection attack. This raises concerns about the integrity of the company's customer data and internal systems, prompting an immediate investigation.
 
