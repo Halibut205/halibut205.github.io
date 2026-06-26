@@ -6,7 +6,8 @@ tags: [cyber-defenders, network-forensics, writeup]
 ---
 
 **Category**: Network Forensics
-**Checkout the lab here**: https://cyberdefenders.org/blueteam-ctf-challenges/lockdown/
+
+**Checkout the lab here**: <https://cyberdefenders.org/blueteam-ctf-challenges/lockdown/>
 
 My first lab on CyberDefenders.
 
