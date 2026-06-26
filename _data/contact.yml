@@ -14,6 +14,10 @@
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
+
+- type: cyberdefenders
+  icon: 'fas fa-shield-halved'
+  url: 'https://cyberdefenders.org/p/Halibut'
 #
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'

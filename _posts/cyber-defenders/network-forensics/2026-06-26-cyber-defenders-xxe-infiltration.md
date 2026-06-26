@@ -7,7 +7,8 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 # XXE Infiltration
 
-Category: Network Forensics
+**Category**: Network Forensics
+**Checkout the lab here**: https://cyberdefenders.org/blueteam-ctf-challenges/xxe-infiltration/
 
 ![image.png](/assets/img/cyber-defenders/xxe-infiltration/image.png)
 
