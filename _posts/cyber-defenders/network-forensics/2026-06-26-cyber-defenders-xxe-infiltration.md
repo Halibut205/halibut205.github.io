@@ -11,14 +11,12 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 ![image.png](/assets/img/cyber-defenders/xxe-infiltration/image.png)
 
-<aside markdown="1">
-➡️ Description
-
-An automated alert has detected unusual XML data being processed by the server, which suggests a potential XXE (XML External Entity) Injection attack. This raises concerns about the integrity of the company's customer data and internal systems, prompting an immediate investigation.
-
-Analyze the provided PCAP file using the network analysis tools available to you. Your goal is to identify how the attacker gained access and what actions they took.
-
-</aside>
+> [!NOTE]
+> **Description**
+> 
+> An automated alert has detected unusual XML data being processed by the server, which suggests a potential XXE (XML External Entity) Injection attack. This raises concerns about the integrity of the company's customer data and internal systems, prompting an immediate investigation.
+> 
+> Analyze the provided PCAP file using the network analysis tools available to you. Your goal is to identify how the attacker gained access and what actions they took.
 
 > **Q1: Identifying the open ports discovered by an attacker helps us understand which services are exposed and potentially vulnerable. Can you identify the highest-numbered port that is open on the victim's web server?**
 > 
@@ -100,3 +98,7 @@ By using just `http.request`, I can see the full picture. Now that we can see `b
 ![image.png](/assets/img/cyber-defenders/xxe-infiltration/image%2011.png)
 
 **Answer: booking.php**
+
+> **Conclusion**
+> 
+> The investigation revealed a successful XML External Entity (XXE) injection attack against the server. The attacker uploaded a malicious XML payload named `TheGreatGatsby.xml` through the vulnerable `/review/upload.php` endpoint. By exploiting this flaw, they were able to read the sensitive `config.php` file and extract the MySQL database credentials. Using these compromised credentials, the attacker connected directly to the MySQL service on port 3306 and subsequently uploaded a web shell named `booking.php`, establishing persistent remote code execution capabilities.

@@ -13,16 +13,12 @@ tags: [cyber-defenders, endpoint-forensics, writeup]
 
 ![image.png](/assets/img/cyber-defenders/volatility-traces/image.png)
 
-<aside>
-➡️
-
-Description
-
-On May 2, 2024, a multinational corporation identified suspicious PowerShell processes on critical systems, indicating a potential malware infiltration. This activity poses a threat to sensitive data and operational integrity.
-
-You have been provided with a memory dump (`memory.dmp`) from the affected system. Your task is to analyze the dump to trace the malware's actions, uncover its evasion techniques, and understand its persistence mechanisms.
-
-</aside>
+> [!NOTE]
+> **Description**
+> 
+> On May 2, 2024, a multinational corporation identified suspicious PowerShell processes on critical systems, indicating a potential malware infiltration. This activity poses a threat to sensitive data and operational integrity.
+> 
+> You have been provided with a memory dump (`memory.dmp`) from the affected system. Your task is to analyze the dump to trace the malware's actions, uncover its evasion techniques, and understand its persistence mechanisms.
 
 This is probably the first lab I've done related to Memory Forensics, so I will overexplain a bit so I can use it as a reference later.
 

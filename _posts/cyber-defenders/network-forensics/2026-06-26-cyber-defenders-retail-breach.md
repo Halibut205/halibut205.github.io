@@ -11,14 +11,12 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 ![image.png](/assets/img/cyber-defenders/retail-breach/image.png)
 
-<aside markdown="1">
-➡️ Description
-
-In recent days, ShopSphere, a prominent online retail platform, has experienced unusual administrative login activity during late-night hours. These logins coincide with an influx of customer complaints about unexplained account anomalies, raising concerns about a potential security breach. Initial observations suggest unauthorized access to administrative accounts, potentially indicating deeper system compromise.
-
-Your mission is to investigate the captured network traffic to determine the nature and source of the breach. Identifying how the attackers infiltrated the system and pinpointing their methods will be critical to understanding the attack's scope and mitigating its impact.
-
-</aside>
+> [!NOTE]
+> **Description**
+> 
+> In recent days, ShopSphere, a prominent online retail platform, has experienced unusual administrative login activity during late-night hours. These logins coincide with an influx of customer complaints about unexplained account anomalies, raising concerns about a potential security breach. Initial observations suggest unauthorized access to administrative accounts, potentially indicating deeper system compromise.
+> 
+> Your mission is to investigate the captured network traffic to determine the nature and source of the breach. Identifying how the attackers infiltrated the system and pinpointing their methods will be critical to understanding the attack's scope and mitigating its impact.
 
 > **Q1: Identifying an attacker's IP address is crucial for mapping the attack's extent and planning an effective response. What is the attacker's IP address?**
 > 
@@ -108,3 +106,7 @@ I can observe that the payload used by the attacker right below.
 ![image.png](/assets/img/cyber-defenders/retail-breach/image%2010.png)
 
 **Answer: ../../../../../etc/passwd**
+
+> **Conclusion**
+> 
+> Through network analysis of the provided packet capture, the full scope of the ShopSphere breach was uncovered. The attacker (IP `111.224.180.128`) initially brute-forced hidden directories using Gobuster. After discovering a vulnerable endpoint, they successfully executed a Cross-Site Scripting (XSS) attack via a malicious payload to steal the session cookie (`lqkctf24s9h9lg67teu8uevn3q`) of an administrator (`135.143.142.5`) who visited the `/review.php` page. By hijacking the admin session, the attacker gained unauthorized access to `log_viewer.php` and exploited a path traversal vulnerability to access sensitive system files like `/etc/passwd`.

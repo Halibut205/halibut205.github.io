@@ -13,14 +13,12 @@ My first lab on CyberDefenders.
 
 ![image.png](/assets/img/cyber-defenders/lockdown/image.png)
 
-<aside markdown="1">
-➡️ Description
-
-TechNova Systems’ SOC has detected suspicious outbound traffic from a public-facing IIS server in its cloud platform—activity suggestive of a web-shell drop and covert connections to an unknown host.
-
-As the forensic examiner, you have three critical artefacts in hand: a PCAP capturing the initial traffic, a full memory image of the server, and a malware sample recovered from disk. Reconstruct the intrusion and all of the attacker’s activities so TechNova can contain the breach and strengthen its defenses.
-
-</aside>
+> [!NOTE]
+> **Description**
+> 
+> TechNova Systems’ SOC has detected suspicious outbound traffic from a public-facing IIS server in its cloud platform—activity suggestive of a web-shell drop and covert connections to an unknown host.
+> 
+> As the forensic examiner, you have three critical artefacts in hand: a PCAP capturing the initial traffic, a full memory image of the server, and a malware sample recovered from disk. Reconstruct the intrusion and all of the attacker’s activities so TechNova can contain the breach and strengthen its defenses.
 
 ## **PCAP Analysis**
 
@@ -213,3 +211,9 @@ In Detection tab. we can see **AliCloud** identify this as:
 ![image.png](/assets/img/cyber-defenders/lockdown/image%2010.png)
 
 **Answer: AgentTesla**
+
+> **Conclusion**
+> 
+> The investigation successfully reconstructed the full attack lifecycle against the TechNova Systems IIS server. The attacker, operating from `10.0.2.4`, initiated the intrusion with Nmap reconnaissance before enumerating SMB shares. They subsequently uploaded a web shell named `shell.aspx` to the `\Documents` share, which established a reverse shell connection back to the attacker over port 4443 via the IIS worker process (`w3wp.exe`).
+> 
+> To achieve persistence, the attacker dropped an executable named `updatenow.exe` into the Windows Startup folder. Further malware analysis revealed the payload was packed with UPX and communicated with the C2 domain `cp8nl.hyperhost.ua`. Open-source intelligence confirmed this sample belongs to the well-known commodity RAT family, AgentTesla.

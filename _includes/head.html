@@ -164,6 +164,13 @@
       background-color: transparent !important;
     }
 
+    /* Increase Text Readability */
+    body, p, .post-content p, .card-text, .post-content li {
+      font-weight: 500 !important;
+      color: #e8eee7 !important; /* Brighter pale color for better contrast */
+      letter-spacing: 0.2px;
+    }
+
     /* Fix PWA notification z-index so it is clickable */
     #notification {
       z-index: 9999 !important;
@@ -195,10 +202,10 @@
     }
 
     /* Buttons */
-    .btn {
-      background-color: var(--color-primary) !important;
-      border: 2px solid var(--color-primary) !important;
-      color: var(--color-pale) !important;
+    .btn, .post-navigation .btn {
+      background-color: rgba(121, 174, 111, 0.15) !important;
+      border: 1px solid var(--color-primary) !important;
+      color: var(--color-primary) !important;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
       border-radius: 8px;
     }
