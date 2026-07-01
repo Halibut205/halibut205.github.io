@@ -196,9 +196,10 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     }
     .nav-link:hover:not(.active) {
-      background-color: rgba(121, 174, 111, 0.2) !important;
+      background-color: rgba(121, 174, 111, 0.25) !important;
       border-radius: 8px;
-      color: var(--color-accent) !important;
+      color: #8ce07d !important;
+      font-weight: 600 !important;
     }
 
     /* Buttons */
@@ -209,9 +210,12 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
       border-radius: 8px;
     }
-    .btn:hover {
-      background-color: var(--color-accent) !important;
-      border-color: var(--color-accent) !important;
+    .btn:hover, .post-navigation .btn:hover {
+      background-color: #79ae6f !important;
+      border-color: #8ce07d !important;
+      color: #ffffff !important; /* Pure white text on hover */
+      font-weight: 700 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
       transform: translateY(-3px) !important;
       box-shadow: 0 8px 20px rgba(121, 174, 111, 0.4) !important;
     }
@@ -225,10 +229,13 @@
       border-radius: 6px;
     }
     .tag:hover {
-      background-color: var(--color-primary) !important;
-      color: var(--color-pale) !important;
+      background-color: #79ae6f !important;
+      border-color: #8ce07d !important;
+      color: #ffffff !important; /* Pure white text on hover */
+      font-weight: 700 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
       transform: scale(1.08) !important;
-      box-shadow: 0 4px 12px rgba(121, 174, 111, 0.3) !important;
+      box-shadow: 0 4px 12px rgba(121, 174, 111, 0.4) !important;
     }
 
     /* Post/Card Hover */
