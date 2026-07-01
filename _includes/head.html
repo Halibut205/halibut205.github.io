@@ -228,7 +228,7 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
       border-radius: 6px;
     }
-    .tag:hover {
+    .tag:hover, .tag:hover:focus, .tag:hover:active {
       background-color: #79ae6f !important;
       border-color: #79ae6f !important;
       color: #ffffff !important; /* Pure white text on hover */
@@ -236,6 +236,15 @@
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
       transform: scale(1.08) !important;
       box-shadow: 0 4px 12px rgba(121, 174, 111, 0.4) !important;
+    }
+
+    /* Remove default blue focus rings from Bootstrap and browsers */
+    a:focus, a:focus-visible, a:active,
+    .tag:focus, .tag:focus-visible, .tag:active,
+    .btn:focus, .btn:focus-visible, .btn:active,
+    button:focus, button:focus-visible, button:active {
+      outline: none !important;
+      box-shadow: none !important;
     }
 
     /* Post/Card Hover */
