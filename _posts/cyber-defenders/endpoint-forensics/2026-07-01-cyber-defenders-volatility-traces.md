@@ -19,7 +19,7 @@ tags: [cyber-defenders, endpoint-forensics, writeup]
 > You have been provided with a memory dump (`memory.dmp`) from the affected system. Your task is to analyze the dump to trace the malware's actions, uncover its evasion techniques, and understand its persistence mechanisms.
 {: .prompt-info }
 
-This is probably the first lab I've done related to Memory Forensics, so I will overexplain a bit so I can use it as a reference later.
+This is probably the first lab I've done related to Memory Forensics, so I will overexplain a bit so I can use it as a reference later. To get started, I need to understand the tool I will be using.
 
 Volatility is a Python-based tool that allows extracting information from memory dumps, such as processes, network connections, registry keys, passwords, encryption keys, and more. Volatility can also perform advanced tasks like malware detection, timeline analysis, memory error remediation, and code injection.
 
