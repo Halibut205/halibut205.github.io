@@ -7,7 +7,7 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 **Category**: Network Forensics
 
-**Checkout the lab here**: <https://cyberdefenders.org/blueteam-ctf-challenges/retailbreach>
+**Checkout the lab here**: [https://cyberdefenders.org/blueteam-ctf-challenges/retailbreach](https://cyberdefenders.org/blueteam-ctf-challenges/retailbreach)
 
 ![image.png](/assets/img/cyber-defenders/retail-breach/image.png)
 

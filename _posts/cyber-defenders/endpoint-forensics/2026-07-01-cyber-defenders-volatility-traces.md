@@ -8,7 +8,7 @@ tags: [cyber-defenders, endpoint-forensics, writeup]
 
 **Category**: Endpoint Forensics
 
-**Checkout the lab here**: https://cyberdefenders.org/blueteam-ctf-challenges/volatility-traces/
+**Checkout the lab here**: [https://cyberdefenders.org/blueteam-ctf-challenges/volatility-traces/](https://cyberdefenders.org/blueteam-ctf-challenges/volatility-traces/)
 
 ![image.png](/assets/img/cyber-defenders/volatility-traces/image.png)
 
