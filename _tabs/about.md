@@ -8,7 +8,7 @@ order: 4
 
 I'm **Halibut**, a professional paranoid (cybersecurity they said) in ECSC, with a strong foundation in **Network**, I'm currently expanding my expertise into **Digital Forensics**, **Binary Analysis** and **Cloud Security**.
 
-When I'm not paranoid, you'll find me dominating *souls game*, *SMT game* or just *being a cinephile* (I love Fritz Lang's movies).
+When I'm not paranoid, you'll find me dominating *Soulslike games*, *SMT games* or just *being a cinephile* (I love Fritz Lang's movies).
 
 My interests:
 - **Digital Forensics** - Investigating digital evidence, incident analysis & incident responses
