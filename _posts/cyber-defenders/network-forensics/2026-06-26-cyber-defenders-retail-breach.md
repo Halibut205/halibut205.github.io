@@ -11,12 +11,12 @@ tags: [cyber-defenders, network-forensics, writeup]
 
 ![image.png](/assets/img/cyber-defenders/retail-breach/image.png)
 
-> [!NOTE]
 > **Description**
 > 
 > In recent days, ShopSphere, a prominent online retail platform, has experienced unusual administrative login activity during late-night hours. These logins coincide with an influx of customer complaints about unexplained account anomalies, raising concerns about a potential security breach. Initial observations suggest unauthorized access to administrative accounts, potentially indicating deeper system compromise.
 > 
 > Your mission is to investigate the captured network traffic to determine the nature and source of the breach. Identifying how the attackers infiltrated the system and pinpointing their methods will be critical to understanding the attack's scope and mitigating its impact.
+{: .prompt-info }
 
 > **Q1: Identifying an attacker's IP address is crucial for mapping the attack's extent and planning an effective response. What is the attacker's IP address?**
 > 
