@@ -6,7 +6,7 @@ order: 4
 
 ## About Me
 
-I'm **Halibut**, a professional paranoid (cybersecurity they said) in ECSC, with a strong foundation in **Network** and **Digital Forensics**, I'm currently expanding my expertise into **Digital Forensics**, **Binary Analysis** and **Cloud Security**.
+I'm **Halibut**, a professional paranoid (cybersecurity they said) in ECSC, with a strong foundation in **Network**, I'm currently expanding my expertise into **Digital Forensics**, **Binary Analysis** and **Cloud Security**.
 
 When I'm not paranoid, you'll find me dominating souls game or just watching some Fritz Lang's movies.
 
