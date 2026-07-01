@@ -36,10 +36,10 @@ The RedLine infostealer variant offers a customizable file-grabber, enabling att
 > **Q1: What is the name of the suspicious process?**
 > 
 
-When analyzing malicious processes on a machine, there are several tactics I can apply:
+When analyzing malicious processes on a machine, there are several appoarch tactics I can use:
 
 - **Wrong/Suspicious Executable Path**
-    - Processes like `svchost.exe`, `lsass.exe`, and `taskhostw.exe` must run from the `C:\Windows\System32\` directory. It is suspicious if a process runs from an unusual location or a directory that does not require Admin privileges to write files.
+    - Some system processes like `svchost.exe`, `lsass.exe`, and `taskhostw.exe` must run from the `C:\Windows\System32\` directory. It is suspicious if a process runs from an unusual location or a directory that does not require Admin privileges to write files.
 - **Mismatched PPID**
     - Inconsistent parent-child process relationships can be an indicator. For example, `svchost.exe` should never have `explorer.exe`, `cmd.exe`, or any arbitrary process as its parent process.
 - **Typosquatting**
