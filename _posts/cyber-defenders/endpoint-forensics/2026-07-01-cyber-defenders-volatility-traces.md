@@ -38,7 +38,7 @@ According to the question, the two child processes called are two PowerShell pro
 vol -f memory.dmp windows.pslist
 ```
 
-`pslist` searches by walking along the doubly-linked list that the Windows operating system uses to manage processes. It finds the PsActiveProcessHead pointer and traverses the ActiveProcessLinks array of the _EPROCESS structure.
+`pslist` searches by walking along the doubly-linked list that the Windows operating system uses to manage processes. It finds the PsActiveProcessHead pointer and traverses the ActiveProcessLinks array of the [_EPROCESS structure](https://medium.com/@s12deff/eprocess-structure-in-windows-kernel-1937aa79c5a4).
 
 ![image.png](/assets/img/cyber-defenders/volatility-traces/image%201.png)
 
